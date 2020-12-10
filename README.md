@@ -61,6 +61,9 @@ You can set up the related setting in config.yaml and run the following command 
 $ python3 make_submission.py --config=config.yaml
 
 
+**Reference:**
+https://github.com/dbolya/yolact
+
 
 
 
