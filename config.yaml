@@ -1,0 +1,55 @@
+train:
+  epochs: 3000
+  pre_epoch: 1500
+  batch_size: 5
+
+  num_workers: 4
+
+  weights_path: ./weights
+  save_interval: 5
+  log_interval: 30
+
+  mAP_interval: 50
+
+  gt_json_name: ./dataset/pascal_train.json
+  save_json_name: ./json/train_test.json
+  test_json_name: ./dataset/pascal_train.json
+  data_path: ./dataset/train_images/
+  calc_mAP: True
+  fast_nms: True
+  cross_class_nms: False
+  top_k: 15
+  score_threshold: 0.15
+  mask_proto_debug: False
+  crop: True
+  display_lincomb: False
+
+
+
+predict:
+  epoch: 3000
+  batch_size: 1
+  weights_path: ./weights
+  save_path: ./pred_imgs
+  data_path: ./dataset/test_images/
+  test_json_name: ./dataset/test.json
+  gt_json_name: ./dataset/pascal_train.json
+  save_json_name: ./json/L091259_8.json
+  num_workers: 4
+
+  score_threshold: 0.15
+  display_scores: True
+  display_text: True
+  display_bboxes: True
+  display_masks: True
+  display_fps: True
+  top_k: 15
+
+  fast_nms: True
+  cross_class_nms: True
+  display_lincomb: False
+  no_crop: False
+  crop: True
+
+  mask_proto_debug: False
+  calc_mAP: False
